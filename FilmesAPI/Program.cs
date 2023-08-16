@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddDbContext<FilmeContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("FilmeConnection")));
+    options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("FilmeConnection")));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
