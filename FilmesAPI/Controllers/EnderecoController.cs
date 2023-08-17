@@ -26,7 +26,7 @@ namespace FilmesAPI.Controllers
             _context.Enderecos.Add(endereco);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(RecuperarEnderecosPorId), new { endereco.Id }, enderecoDto);
+            return CreatedAtAction(nameof(RecuperarEnderecosPorId), new { endereco.Id }, endereco);
         }
 
         [HttpGet]
